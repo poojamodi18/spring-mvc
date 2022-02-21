@@ -2,6 +2,8 @@ package com.springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
+import com.springdemo.mvc.validation.CourseCode;
+
 public class Student {
 	
 	private String firstName;
@@ -11,6 +13,9 @@ public class Student {
 	private String[] operatingSystem;
 	
 	private LinkedHashMap<String, String> countryOption;
+	
+	@CourseCode(value="CS", message="must start with CS")
+	private String courseCode;
 	
 	public Student() {
 		countryOption = new LinkedHashMap<>();
@@ -61,6 +66,14 @@ public class Student {
 
 	public void setOperatingSystem(String[] operatingSystem) {
 		this.operatingSystem = operatingSystem;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 
 	

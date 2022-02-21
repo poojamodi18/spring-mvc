@@ -10,10 +10,12 @@
 </head>
 <body>
 <div>
-	<p>
-		${student.firstName}  ${student.lastName}
+	<div>
+		Name: ${student.firstName}  ${student.lastName}
 		<br>
 		Country : ${student.country}
+		<br>
+		Course Code:${student.courseCode}
 		<br>
 		Language : ${student.language}
 		<br>
@@ -23,7 +25,7 @@
 				<li>${os}</li>
 			</c:forEach>
 		</ul>
-	</p>
+	</div>
 </div>
 </body>
 </html>

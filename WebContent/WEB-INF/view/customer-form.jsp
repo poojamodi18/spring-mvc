@@ -18,14 +18,28 @@
 <form:form action="processForm" modelAttribute="customer">
 	<label>First Name:</label>
 	<form:input path="FirstName"/>
-	<br>
+	<br><br>
 	
 	<label>Last Name*:</label>
 	<form:input path="LastName"/>
 	<form:errors path="lastName" cssClass="error"/>
-	<br>
+	<br><br>
 	
-	<input type="submit" value="Submit"> 
+	<label>Free Passes:</label>
+	<form:input path="freePass"/>
+	<form:errors path="freePass" cssClass="error"/>
+	<br><br>
+	
+	<label>Postal Code:</label>
+	<form:input path="postalCode"/>
+	<form:errors path="postalCode" cssClass="error"/>
+	<br><br>
+	
+	<input type="submit" value="Submit">
+	&nbsp; 
+	
 </form:form>
+<br>
+<a href="/spring-mvc/home"><button>Home</button></a>
 </body>
 </html>
